@@ -1,0 +1,29 @@
+MDFloatLayout:
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            id: task_label
+            text: size: self.size
+            halign: "center"
+            valign: "middle"
+            text: "Enter Task"
+            font_size: 32
+
+        TextInput:
+            id: task_input
+            multiline: False
+            size_hint: (1, .5)
+
+        Button:
+            size_hint: (1, .5)
+            font_size: 32
+            text: "Save Task"
+            on_press: app.save_task()
+
+        Button:
+            size_hint: (1, .5)
+            font_size: 32
+            text: "Show Tasks"
+            on_press: app.show_tasks()
